@@ -1,0 +1,35 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Presenter {
+
+    // MARK: - Properties
+
+    weak var view: {{ module_info.name }}ViewInput?
+    private let router: {{ module_info.name }}RouterInput
+    private let output: {{ module_info.name }}ModuleOutput?
+
+    // MARK: - Lyfecycle
+
+    init(router: {{ module_info.name }}RouterInput, output: {{ module_info.name }}ModuleOutput?) {
+    	self.router = router
+    	self.output = output
+    }
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+
+	// MARK: - {{ module_info.name }}ViewOutput
+
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {
+
+	// MARK: - {{ module_info.name }}ModuleInput
+
+}
