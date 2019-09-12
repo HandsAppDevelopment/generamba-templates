@@ -14,7 +14,7 @@ class {{ module_info.name }}ViewController: UIViewController, ModuleTransitionab
 
     private let output: {{ module_info.name }}ViewOutput
 
-    // MARK: - Lifecycles
+    // MARK: - Lifecycle
 
     init(output: {{ module_info.name }}ViewOutput) {
         self.output = output
@@ -28,10 +28,12 @@ class {{ module_info.name }}ViewController: UIViewController, ModuleTransitionab
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    // MARK: - Prepare View
+
+    // MARK: - Actions
 }
 
-extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInput {
+// MARK: - {{ module_info.name }}ViewInput
 
-    // MARK: - {{ module_info.name }}ViewInput
-
-}
+extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewInput { }
