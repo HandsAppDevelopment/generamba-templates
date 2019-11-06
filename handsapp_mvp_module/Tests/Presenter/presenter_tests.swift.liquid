@@ -1,0 +1,26 @@
+
+import XCTest
+@testable import {{ module_info.product_module_name  }}
+
+class {{ module_info.name }}PresenterTests: XCTestCase {
+
+    // MARK: - Properties
+
+    private var presenter: {{ module_info.name }}Presenter!
+
+    // MARK: - Lifecycle
+
+    override func setUp() {
+        super.setUp()
+
+        let router = Mock{{ module_info.name }}Router()
+        let output = Mock{{ module_info.name }}ModuleOutput()
+        presenter = {{ module_info.name }}Presenter(router: router, output: output)
+        
+        let view = Mock{{ module_info.name }}ViewController()
+        presenter.view = view
+    }
+
+    // MARK: - Tests
+
+}

@@ -25,3 +25,17 @@ code_files:
 
 # Configurator
 - {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
+
+
+# The declarations for test files
+
+test_files:
+
+# Configurators tests
+- {name: Configurator/ModuleConfiguratorTests.swift, path: Tests/Configurator/module_configurator_tests.swift.liquid}
+
+# Presenter tests
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+- {name: Presenter/ViewControllerMock.swift, path: Tests/Presenter/view_controller_mock.swift.liquid}
+- {name: Presenter/RouterMock.swift, path: Tests/Presenter/router_mock.swift.liquid}
+- {name: Presenter/ModuleOutputMock.swift, path: Tests/Presenter/module_output_mock.swift.liquid}
