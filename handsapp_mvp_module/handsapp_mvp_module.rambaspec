@@ -32,12 +32,12 @@ code_files:
 test_files:
 
 # Configurators tests
-- {name: ModuleConfiguratorTests.swift, path: Tests/Configurator/module_configurator_tests.swift.liquid}
+- {name: ModuleConfiguratorTests.swift, path: Tests/module_configurator_tests.swift.liquid}
 
 # Presenter tests
-- {name: PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+- {name: PresenterTests.swift, path: Tests/presenter_tests.swift.liquid}
 
 # Mock Objects
-- {name: Presenter/ViewControllerMock.swift, path: Tests/Presenter/view_controller_mock.swift.liquid}
-- {name: Presenter/RouterMock.swift, path: Tests/Presenter/router_mock.swift.liquid}
-- {name: Presenter/ModuleOutputMock.swift, path: Tests/Presenter/module_output_mock.swift.liquid}
+- {name: Mock Objects/ViewControllerMock.swift, path: Tests/Mock Objects/view_controller_mock.swift.liquid}
+- {name: Mock Objects/RouterMock.swift, path: Tests/Mock Objects/router_mock.swift.liquid}
+- {name: Mock Objects/ModuleOutputMock.swift, path: Tests/Mock Objects/module_output_mock.swift.liquid}

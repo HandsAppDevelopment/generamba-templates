@@ -18,10 +18,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
     func testViewOutput() {
         let isPresenter = viewController.output is {{ module_info.name }}Presenter
-        XCTAssertTrue(
-            isPresenter, 
-            "viewController.output is not {{ module_info.name }}Presenter"
-        )
+        XCTAssertTrue(isPresenter, "viewController.output is not {{ module_info.name }}Presenter")
     }
 
     func testViewInput() {
@@ -31,7 +28,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         }
 
         let isViewController = presenter.view is {{ module_info.name }}ViewController
-        XCTAssertTrue(viewIsViewController, "presenter.view is not {{ module_info.name }}ViewController")
+        XCTAssertTrue(isViewController, "presenter.view is not {{ module_info.name }}ViewController")
     }
 
     func testRouterInput() {
@@ -45,7 +42,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
     }
 
     func testModuleTransitionable() {
-        guard let presenter = viewController.output as? {{ module_info.name }}Presenter {
+        guard let presenter = viewController.output as? {{ module_info.name }}Presenter else {
             XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
             return
         }
