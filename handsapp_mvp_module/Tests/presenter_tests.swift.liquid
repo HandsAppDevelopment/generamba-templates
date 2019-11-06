@@ -13,11 +13,11 @@ class {{ module_info.name }}PresenterTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let router = Mock{{ module_info.name }}Router()
-        let output = Mock{{ module_info.name }}ModuleOutput()
+        let router = {{ module_info.name }}RouterMock()
+        let output = {{ module_info.name }}ModuleOutputMock()
         presenter = {{ module_info.name }}Presenter(router: router, output: output)
         
-        let view = Mock{{ module_info.name }}ViewController()
+        let view = {{ module_info.name }}ViewControllerMock()
         presenter.view = view
     }
 

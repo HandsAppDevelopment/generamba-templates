@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import {{ module_info.product_module_name  }}
 
@@ -32,10 +31,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         }
 
         let isViewController = presenter.view is {{ module_info.name }}ViewController
-        XCTAssertTrue(
-            viewIsViewController, 
-            "presenter.view is not {{ module_info.name }}ViewController"
-        )
+        XCTAssertTrue(viewIsViewController, "presenter.view is not {{ module_info.name }}ViewController")
     }
 
     func testRouterInput() {
@@ -45,10 +41,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         }
 
         let isRouter = presenter.router is {{ module_info.name }}Router
-        XCTAssertTrue(
-            isRouter, 
-            "presenter.router is not {{ module_info.name }}Router"
-        )
+        XCTAssertTrue(isRouter, "presenter.router is not {{ module_info.name }}Router")
     }
 
     func testModuleTransitionable() {
@@ -62,9 +55,6 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
         }
 
         let isViewController = router.view is {{ module_info.name }}ViewController
-        XCTAssertTrue(
-            isViewController, 
-            "router.view is not {{ module_info.name }}ViewController"
-        )
+        XCTAssertTrue(isViewController, "router.view is not {{ module_info.name }}ViewController")
     }
 }
