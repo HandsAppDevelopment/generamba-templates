@@ -1,7 +1,7 @@
 import XCTest
 @testable import {{ module_info.product_module_name  }}
 
-class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
+class {{ module_info.name }}ModuleAssemblyTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -11,7 +11,7 @@ class {{ module_info.name }}ModuleConfiguratorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        viewController = {{ module_info.name }}ModuleConfigurator().configure()
+        viewController = {{ module_info.name }}ModuleAssembly().assemble()
     }
 
 	// MARK: - Tests

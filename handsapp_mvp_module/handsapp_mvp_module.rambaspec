@@ -10,29 +10,24 @@ license: "MIT"
 code_files:
 
 # View layer
-- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
-- {name: View/ViewInput.swift,  path: Code/View/view_input.swift.liquid}
-- {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}
+- {name: ViewController.swift, path: Code/view_controller.swift.liquid}
 
 # Presenter layer
-- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
-- {name: Presenter/ModuleInput.swift, path: Code/Presenter/module_input.swift.liquid}
-- {name: Presenter/ModuleOutput.swift, path: Code/Presenter/module_output.swift.liquid}
+- {name: Presenter.swift, path: Code/presenter.swift.liquid}
 
 # Router layer
-- {name: Router/Router.swift, path: Code/Router/router.swift.liquid}
-- {name: Router/RouterInput.swift, path: Code/Router/router_input.swift.liquid}
+- {name: Router.swift, path: Code/router.swift.liquid}
 
-# Configurator
-- {name: Configurator/ModuleConfigurator.swift, path: Code/Configurator/module_configurator.swift.liquid}
+# Assembly
+- {name: ModuleAssembly.swift, path: Code/module_assembly.swift.liquid}
 
 
 # The declarations for test files
 
 test_files:
 
-# Configurators tests
-- {name: ModuleConfiguratorTests.swift, path: Tests/module_configurator_tests.swift.liquid}
+# Assembly tests
+- {name: ModuleAssemblyTests.swift, path: Tests/module_assembly_tests.swift.liquid}
 
 # Presenter tests
 - {name: PresenterTests.swift, path: Tests/presenter_tests.swift.liquid}
