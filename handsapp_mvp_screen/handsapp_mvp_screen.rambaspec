@@ -1,8 +1,8 @@
 # Template information section
-name: "handsapp_mvp_module"
-summary: "Template for creating MVP modules."
+name: "handsapp_mvp_screen"
+summary: "Template for creating MVP screens."
 author: "Nikita Krasavin"
-version: "1.0.0"
+version: "1.1"
 license: "MIT"
 
 # The declarations for code files
@@ -19,7 +19,7 @@ code_files:
 - {name: Router.swift, path: Code/router.swift.liquid}
 
 # Assembly
-- {name: ModuleAssembly.swift, path: Code/module_assembly.swift.liquid}
+- {name: ScreenAssembly.swift, path: Code/screen_assembly.swift.liquid}
 
 
 # The declarations for test files
@@ -27,7 +27,7 @@ code_files:
 test_files:
 
 # Assembly tests
-- {name: ModuleAssemblyTests.swift, path: Tests/module_assembly_tests.swift.liquid}
+- {name: ScreenAssemblyTests.swift, path: Tests/screen_assembly_tests.swift.liquid}
 
 # Presenter tests
 - {name: PresenterTests.swift, path: Tests/presenter_tests.swift.liquid}
@@ -35,4 +35,4 @@ test_files:
 # Mock Objects
 - {name: Mock Objects/ViewControllerMock.swift, path: Tests/Mock Objects/view_controller_mock.swift.liquid}
 - {name: Mock Objects/RouterMock.swift, path: Tests/Mock Objects/router_mock.swift.liquid}
-- {name: Mock Objects/ModuleOutputMock.swift, path: Tests/Mock Objects/module_output_mock.swift.liquid}
+- {name: Mock Objects/ScreenOutputMock.swift, path: Tests/Mock Objects/screen_output_mock.swift.liquid}

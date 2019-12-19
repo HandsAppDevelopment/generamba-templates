@@ -1,7 +1,7 @@
 import XCTest
 @testable import {{ module_info.product_module_name  }}
 
-class {{ module_info.name }}ModuleAssemblyTests: XCTestCase {
+class {{ module_info.name }}ScreenAssemblyTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -11,7 +11,7 @@ class {{ module_info.name }}ModuleAssemblyTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        viewController = {{ module_info.name }}ModuleAssembly().assemble()
+        viewController = {{ module_info.name }}ScreenAssembly().assemble()
     }
 
 	// MARK: - Tests
@@ -41,7 +41,7 @@ class {{ module_info.name }}ModuleAssemblyTests: XCTestCase {
         XCTAssertTrue(isRouter, "presenter.router is not {{ module_info.name }}Router")
     }
 
-    func testModuleTransitionable() {
+    func testScreenTransitionable() {
         guard let presenter = viewController.output as? {{ module_info.name }}Presenter else {
             XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
             return
