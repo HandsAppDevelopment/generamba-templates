@@ -13,11 +13,11 @@ class {{ module_info.name }}PresenterTests: XCTestCase {
         super.setUp()
 
         let router = {{ module_info.name }}RouterMock()
-        let output = {{ module_info.name }}ScreenOutputMock()
-        presenter = {{ module_info.name }}Presenter(router: router, output: output)
-
         let view = {{ module_info.name }}ViewControllerMock()
+        let output = {{ module_info.name }}ScreenOutputMock()
+        presenter = {{ module_info.name }}Presenter(router: router)
         presenter.view = view
+        presenter.output = output
     }
 
     // MARK: - Tests

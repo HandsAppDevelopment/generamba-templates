@@ -8,13 +8,12 @@ class {{ module_info.name }}Presenter {
 
     weak var view: {{ module_info.name }}ViewInput?
 	let router: {{ module_info.name }}RouterInput
-    let output: {{ module_info.name }}ScreenOutput?
+    weak var output: {{ module_info.name }}ScreenOutput?
 
     // MARK: - Lifecycle
 
-    init(router: {{ module_info.name }}RouterInput, output: {{ module_info.name }}ScreenOutput?) {
+    init(router: {{ module_info.name }}RouterInput) {
     	self.router = router
-    	self.output = output
     }
 }
 
