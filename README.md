@@ -3,7 +3,8 @@
 
 ## List of templates
 
-* [MVP screen](https://github.com/HandsAppTeam/generamba-templates/tree/master/handsapp_mvp_screen) - generates a new module of HandsAppMVP architecture.
+* [MVP screen](https://github.com/HandsAppTeam/generamba-templates/tree/master/handsapp_mvp_screen) - generates a new screen of HandsAppMVP architecture.
+* [MVP table screen](https://github.com/HandsAppTeam/generamba-templates/tree/master/handsapp_mvp_table_screen) - generates a new screen of HandsAppMVP architecture contains UITableView.
 
 ## Installation
 

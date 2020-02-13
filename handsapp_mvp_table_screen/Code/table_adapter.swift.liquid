@@ -1,0 +1,33 @@
+import UIKit
+
+protocol {{ module_info.name }}TableAdapterOutput: AnyObject {}
+
+class {{ module_info.name }}TableAdapter: NSObject {
+
+    // MARK: - Properties
+
+    var items: [PreparableViewModel] = []
+    weak var output: {{ module_info.name }}TableAdapterOutput?
+
+}
+
+// MARK: - UITableViewDataSource
+
+extension {{ module_info.name }}TableAdapter: UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        items.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellId, for: indexPath)
+        if let reusableCell = cell as? PreparableTableCell {
+            reusableCell.prepare(withViewModel: viewModel)
+        }
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension {{ module_info.name }}TableAdapter: UITableViewDelegate {}

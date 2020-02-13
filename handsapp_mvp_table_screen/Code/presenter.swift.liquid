@@ -1,0 +1,30 @@
+protocol {{ module_info.name }}ScreenOutput: AnyObject {}
+
+protocol {{ module_info.name }}ScreenInput: AnyObject {}
+
+class {{ module_info.name }}Presenter {
+
+    // MARK: - Properties
+
+    weak var view: {{ module_info.name }}ViewInput?
+	let router: {{ module_info.name }}RouterInput
+    weak var output: {{ module_info.name }}ScreenOutput?
+
+    // MARK: - Lifecycle
+
+    init(router: {{ module_info.name }}RouterInput) {
+    	self.router = router
+    }
+}
+
+// MARK: - {{ module_info.name }}ViewOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {}
+
+// MARK: - {{ module_info.name }}TableAdapterOutput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}TableAdapterOutput {}
+
+// MARK: - {{ module_info.name }}ScreenInput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ScreenInput {}

@@ -1,0 +1,39 @@
+# Template information section
+name: "handsapp_mvp_screen"
+summary: "Template for creating MVP screens."
+author: "Nikita Krasavin"
+version: "1.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+# View layer
+- {name: ViewController.swift, path: Code/view_controller.swift.liquid}
+- {name: TableAdapter.swift, path: Code/table_adapter.swift.liquid}
+
+# Presenter layer
+- {name: Presenter.swift, path: Code/presenter.swift.liquid}
+
+# Router layer
+- {name: Router.swift, path: Code/router.swift.liquid}
+
+# Assembly
+- {name: ScreenAssembly.swift, path: Code/screen_assembly.swift.liquid}
+
+
+# The declarations for test files
+
+test_files:
+
+# Assembly tests
+- {name: ScreenAssemblyTests.swift, path: Tests/screen_assembly_tests.swift.liquid}
+
+# Presenter tests
+- {name: PresenterTests.swift, path: Tests/presenter_tests.swift.liquid}
+
+# Mock Objects
+- {name: Mock Objects/ViewControllerMock.swift, path: Tests/Mock Objects/view_controller_mock.swift.liquid}
+- {name: Mock Objects/RouterMock.swift, path: Tests/Mock Objects/router_mock.swift.liquid}
+- {name: Mock Objects/ScreenOutputMock.swift, path: Tests/Mock Objects/screen_output_mock.swift.liquid}

@@ -1,0 +1,62 @@
+import XCTest
+@testable import {{ module_info.product_module_name  }}
+
+class {{ module_info.name }}ScreenAssemblyTests: XCTestCase {
+
+    // MARK: - Properties
+
+    private var viewController: {{ module_info.name }}ViewController!
+
+    // MARK: - Lifecycle
+
+    override func setUp() {
+        super.setUp()
+        viewController = {{ module_info.name }}ScreenAssembly().assemble()
+    }
+
+	// MARK: - Tests
+
+    func testViewOutput() {
+        let isPresenter = viewController.output is {{ module_info.name }}Presenter
+        XCTAssertTrue(isPresenter, "viewController.output is not {{ module_info.name }}Presenter")
+    }
+
+    func testViewInput() {
+        guard let presenter = viewController.output as? {{ module_info.name }}Presenter else {
+            XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
+            return
+        }
+
+        let isViewController = presenter.view is {{ module_info.name }}ViewController
+        XCTAssertTrue(isViewController, "presenter.view is not {{ module_info.name }}ViewController")
+    }
+
+    func testTableAdapterOutput() {
+        let isPresenter = viewController.tableAdapter.output is {{ module_info.name }}Presenter
+        XCTAssertTrue(isPresenter, "viewController.tableAdapter.output is not {{ module_info.name }}Presenter")
+    }
+
+    func testRouterInput() {
+        guard let presenter = viewController.output as? {{ module_info.name }}Presenter else {
+            XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
+            return
+        }
+
+        let isRouter = presenter.router is {{ module_info.name }}Router
+        XCTAssertTrue(isRouter, "presenter.router is not {{ module_info.name }}Router")
+    }
+
+    func testScreenTransitionable() {
+        guard let presenter = viewController.output as? {{ module_info.name }}Presenter else {
+            XCTFail("Cannot assign viewController.output as {{ module_info.name }}Presenter")
+            return
+        }
+        guard let router = presenter.router as? {{ module_info.name }}Router else {
+            XCTFail("Cannot assign presenter.router as {{ module_info.name }}Router")
+            return
+        }
+
+        let isViewController = router.view is {{ module_info.name }}ViewController
+        XCTAssertTrue(isViewController, "router.view is not {{ module_info.name }}ViewController")
+    }
+}
