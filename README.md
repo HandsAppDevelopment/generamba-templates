@@ -3,7 +3,7 @@
 
 ## List of templates
 
-* [MVP module](https://github.com/HandsAppTeam/generamba-templates/tree/master/handsapp_mvp_module) - generates a new module of MVP architecture.
+* [MVP screen](https://github.com/HandsAppTeam/generamba-templates/tree/master/handsapp_mvp_screen) - generates a new module of HandsAppMVP architecture.
 
 ## Installation
 
